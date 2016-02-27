@@ -16,5 +16,15 @@ namespace Lab_ReserseSentence
             InitializeComponent();
         }
 
+        private void btnResult_Click(object sender, EventArgs e)
+        {
+            string input = txbInput.Text;
+
+            // Split the words and reverse their order
+            char[] punctuationMarks = new char[] { ' ', ',', '.', ';', ':', '!', '?', '(', ')' };
+            string[] words = input.Split(punctuationMarks, StringSplitOptions.RemoveEmptyEntries);
+            Array.Reverse(words);
+        }
+
     }
 }

@@ -28,21 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbInput = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblResult = new System.Windows.Forms.Label();
+            this.btnResult = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txbInput
             // 
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(12, 21);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(303, 30);
-            this.textBox1.TabIndex = 0;
+            this.txbInput.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbInput.ForeColor = System.Drawing.Color.Black;
+            this.txbInput.Location = new System.Drawing.Point(12, 21);
+            this.txbInput.Multiline = true;
+            this.txbInput.Name = "txbInput";
+            this.txbInput.Size = new System.Drawing.Size(303, 30);
+            this.txbInput.TabIndex = 0;
+            this.txbInput.Text = "C# is not C++, not PHP and not Delphi!";
             // 
             // label1
             // 
@@ -66,15 +68,27 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Reversed string";
             // 
-            // label3
+            // lblResult
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(12, 93);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 19);
-            this.label3.TabIndex = 3;
+            this.lblResult.AutoSize = true;
+            this.lblResult.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblResult.ForeColor = System.Drawing.Color.Black;
+            this.lblResult.Location = new System.Drawing.Point(12, 93);
+            this.lblResult.Name = "lblResult";
+            this.lblResult.Size = new System.Drawing.Size(0, 19);
+            this.lblResult.TabIndex = 3;
+            // 
+            // btnResult
+            // 
+            this.btnResult.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnResult.ForeColor = System.Drawing.Color.Black;
+            this.btnResult.Location = new System.Drawing.Point(114, 139);
+            this.btnResult.Name = "btnResult";
+            this.btnResult.Size = new System.Drawing.Size(75, 23);
+            this.btnResult.TabIndex = 4;
+            this.btnResult.Text = "Result";
+            this.btnResult.UseVisualStyleBackColor = true;
+            this.btnResult.Click += new System.EventHandler(this.btnResult_Click);
             // 
             // ReverseSentence
             // 
@@ -82,10 +96,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(349, 174);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.btnResult);
+            this.Controls.Add(this.lblResult);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txbInput);
             this.Name = "ReverseSentence";
             this.Text = "ReversingSentences";
             this.ResumeLayout(false);
@@ -95,10 +110,11 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txbInput;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblResult;
+        private System.Windows.Forms.Button btnResult;
     }
 }
 
