@@ -45,6 +45,26 @@ namespace Lab_ReserseSentence
                     default: marksPosition.Add('n'); break;
                 }
             }
+            // Replace the word placeholders from the mask with the words in reversed order 
+            // and print them together with the punctuation marks
+            int countMask = 0;
+            int countWords = 0;
+            string result = "";
+            for (int i = 0; i < marksPosition.Count; i++)
+            {
+                if ((marksPosition[i] == 'n') && (countMask == 0))
+                {
+                    result += words[countWords];
+                    countMask++;
+                    countWords++;
+                }
+                else if (marksPosition[i] != 'n')
+                {
+                    result += Convert.ToString(marksPosition[i]);
+                    countMask = 0;
+                }
+            }
+            label1.Text = result;
         }
 
     }
