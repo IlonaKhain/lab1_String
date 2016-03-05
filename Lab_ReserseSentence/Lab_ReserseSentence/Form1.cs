@@ -24,6 +24,27 @@ namespace Lab_ReserseSentence
             char[] punctuationMarks = new char[] { ' ', ',', '.', ';', ':', '!', '?', '(', ')' };
             string[] words = input.Split(punctuationMarks, StringSplitOptions.RemoveEmptyEntries);
             Array.Reverse(words);
+
+            // Create a punctuation marks mask
+            List<char> marksPosition = new List<char>();
+
+            foreach (char character in input)
+            {
+                switch (character)
+                {
+                    case ' ': marksPosition.Add(character); break;
+                    case ',': marksPosition.Add(character); break;
+                    case '.': marksPosition.Add(character); break;
+                    case ':': marksPosition.Add(character); break;
+                    case ';': marksPosition.Add(character); break;
+                    case '!': marksPosition.Add(character); break;
+                    case '?': marksPosition.Add(character); break;
+                    case '(': marksPosition.Add(character); break;
+                    case ')': marksPosition.Add(character); break;
+
+                    default: marksPosition.Add('n'); break;
+                }
+            }
         }
 
     }
